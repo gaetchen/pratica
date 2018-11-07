@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+      <script type="text/javascript">  
+  function cargarNombres(nombres)
+  {
+    var f;
+    for(f=0;f<nombres.length;f++)
+    {
+      nombres[f] = prompt("Ingrese Nombre "+ (f+1));
+      
+    }
+  }
+
+  function cargarSueldos(sueldosP)	
+	
+  {		tasa = prompt("Digite Tasa del Dólar",49.8);
+		tasa = parseFloat(tasa);
+		var f;
+		for(f=0;f<sueldosP.length;f++)
+		{
+		  var v;
+		  v=prompt('Ingrese sueldo:'+ (f+1));
+		  sueldosP[f] = parseFloat(v); 
+		  sueldosD[f] = sueldosP[f] / tasa; 
+		}
+	}
+	
+  
+	  var nombres, sueldosP, sueldosD, tasa;
+	  nombres = new Array(4);
+	  sueldosP = new Array(4);
+	  sueldosD = new Array(4);
+	  
+	  
+	  cargarNombres(nombres);
+	  cargarSueldos(sueldosP);
+	  
+	  for(f=0;f<sueldosP.length;f++)
+		{
+		document.write("Nombre", (f+1),": ",nombres[f],"<br>");
+		document.write("Sueldo", (f+1)," en pesos = ",sueldosP[f],"<br>");
+		document.write("Sueldo", (f+1)," en Dolar = ",sueldosD[f],"<br>");
+		document.write("<hr>","<br>");
+		}
+	  </script>
+    </body>
+</html>
